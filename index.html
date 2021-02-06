@@ -103,9 +103,13 @@
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
         <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> -->
         <script>
-
+            let timeout = null
             $(document).ready(function(){
-                if($(window).scrollTop() !== 0){
+                    if($(window).scrollTop() !== 0){
+                        if($(window).width() < 600){
+                        return
+                    }
+
                     clearTimeout(timeout)
                     $(".left-intro").width("100%");
                     $(".right-intro").width("0%");
@@ -119,7 +123,6 @@
                 }
             })
 
-            let timeout = null
             $(window).scroll(function(){
                 if($(window).width() < 600){
                     return

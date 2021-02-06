@@ -1,6 +1,6 @@
 @import "./content/pageone.css";
 @import "./content/pagetwo.css";
-@import "./content/pagethre.css";
+@import "./content/pagethree.css";
 
 .content-container{
     display: flex;
