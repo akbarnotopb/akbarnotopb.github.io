@@ -1,0 +1,135 @@
+
+#intro-small-movement{
+    display:none;
+}
+
+.left-intro:first{
+    height: 20%;
+}
+
+.right-intro > div p {
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+
+.right-intro > div {
+    position: fixed;
+    top: 50%;
+    padding:0 100px;
+}
+
+.left-intro > div p {
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+
+.right-intro > div::before{
+    content: "";
+    background: #013880;
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin-top: -50px;
+    margin-left: -40px;
+    border-radius: 20px;
+    /* position: relative; */
+}
+
+.left-intro{
+    background-color: #013880!important;
+    transition: width 2s;
+}
+
+
+.intro-background{
+    width: 50%;
+}
+
+#intro{
+    color:white;
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 1s;
+    /* padding: 20px; */
+    /* box-shadow: 0 10px 25px rgb(255 255 255 / 20%);
+    background: rgba(255,255,255,.5); */
+}
+
+#intro.lefted{
+    left: 75%;
+}
+
+#intro h1{
+    margin:0;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 8rem;
+    letter-spacing: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .intro-background{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .right-intro{
+        display: none;
+    }
+
+    #intro h1{
+        font-size: 4rem;
+    }
+
+    #intro{
+        color:white;
+        position:initial;
+        top: unset;
+        left: unset;
+        -moz-transform: unset;
+        -webkit-transform: unset;
+        transform: unset;
+        transition: all 1s;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        /* box-shadow: 0 10px 25px rgb(255 255 255 / 20%);
+        background: rgba(255,255,255,.5); */
+    }
+
+    #intro-small-movement{
+        display: unset;
+    }
+    
+}
+
+  
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
