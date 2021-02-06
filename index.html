@@ -121,6 +121,25 @@
                 }
             })
 
+            $(window).resize(function(){
+                if($(window).width() < 600){
+                    return
+                }
+
+                if($(window).scrollTop() !== 0){
+                    clearTimeout(timeout)
+                    $(".left-intro").width("100%");
+                    $(".right-intro").width("0%");
+                    $("#intro").addClass("lefted");
+                }else{
+                    $(".left-intro").width("50%");
+                    timeout = setTimeout(()=>{
+                        $(".right-intro").width("50%");
+                    },1800)
+                    $("#intro").removeClass("lefted");
+                }
+            })
+
             $(window).scroll(function(){
                 if($(window).width() < 600){
                     return
