@@ -105,21 +105,19 @@
         <script>
             let timeout = null
             $(document).ready(function(){
+                if($(window).width() > 600){
                     if($(window).scrollTop() !== 0){
-                        if($(window).width() < 600){
-                        return
+                        clearTimeout(timeout)
+                        $(".left-intro").width("100%");
+                        $(".right-intro").width("0%");
+                        $("#intro").addClass("lefted");
+                    }else{
+                        $(".left-intro").width("50%");
+                        timeout = setTimeout(()=>{
+                            $(".right-intro").width("50%");
+                        },1800)
+                        $("#intro").removeClass("lefted");
                     }
-
-                    clearTimeout(timeout)
-                    $(".left-intro").width("100%");
-                    $(".right-intro").width("0%");
-                    $("#intro").addClass("lefted");
-                }else{
-                    $(".left-intro").width("50%");
-                    timeout = setTimeout(()=>{
-                        $(".right-intro").width("50%");
-                    },1800)
-                    $("#intro").removeClass("lefted");
                 }
             })
 
