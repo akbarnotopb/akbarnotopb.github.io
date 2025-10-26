@@ -31,9 +31,6 @@ $(window).scroll(function(){
             $("#fading-scroll-helper").animate({"opacity": 0});
         }
     }else{
-        if($(window).scrollTop() < window.innerHeight * 0.4){
-            $("#fading-scroll-helper").animate({"opacity": 100});
-        }
         $(".left-intro").width("50%");
         timeout = setTimeout(()=>{
             $(".right-intro").width("50%");
